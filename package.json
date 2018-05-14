@@ -1,0 +1,75 @@
+{
+  "name": "nest-typescript-starter",
+  "version": "1.0.0",
+  "description": "Nest TypeScript starter repository",
+  "license": "MIT",
+  "scripts": {
+    "format": "prettier --write \"**/*.ts\"",
+    "start": "ts-node -r tsconfig-paths/register src/main.ts",
+    "start:dev": "nodemon",
+    "prestart:prod": "rm -rf dist && tsc",
+    "start:prod": "node dist/main.js",
+    "test": "jest",
+    "test:karma": "karma start",
+    "test:mocha": "mocha -r ts-node/register src/**/*Spec.ts"
+  },
+  "dependencies": {
+    "@nestjs/common": "^4.5.9",
+    "@nestjs/core": "^4.5.10",
+    "@nestjs/microservices": "^4.5.8",
+    "@nestjs/mongoose": "^3.0.1",
+    "@nestjs/testing": "^4.5.5",
+    "@nestjs/websockets": "^4.5.8",
+    "cors": "^2.8.4",
+    "dookie": "^0.2.0",
+    "express-status-monitor": "^1.0.1",
+    "jasmine": "^3.1.0",
+    "js-yaml": "^3.11.0",
+    "jsonwebtoken": "^8.2.1",
+    "karma-cli": "^1.0.1",
+    "karma-jasmine-html-reporter": "^1.0.0",
+    "mocha": "^5.1.1",
+    "mongoose": "^5.0.15",
+    "morgan": "^1.9.0",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
+    "reflect-metadata": "^0.1.12",
+    "rxjs": "^5.5.6",
+    "typescript": "^2.6.2"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.1.2",
+    "@types/express": "^4.0.39",
+    "@types/jest": "^21.1.8",
+    "@types/mocha": "^5.2.0",
+    "@types/node": "^9.3.0",
+    "@types/supertest": "^2.0.4",
+    "chai": "^4.1.2",
+    "jasmine-core": "^3.1.0",
+    "jest": "^21.2.1",
+    "karma": "^2.0.0",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-jasmine": "^1.1.1",
+    "nodemon": "^1.14.1",
+    "prettier": "^1.11.1",
+    "supertest": "^3.0.0",
+    "ts-jest": "^21.2.4",
+    "ts-node": "^4.1.0",
+    "tsconfig-paths": "^3.1.1",
+    "tslint": "5.3.2",
+    "typings": "^2.1.1"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts"
+    ],
+    "rootDir": "src",
+    "testRegex": ".spec.ts$",
+    "transform": {
+      "^.+\\.(t|j)s$": "ts-jest"
+    },
+    "coverageDirectory": "../coverage"
+  }
+}
